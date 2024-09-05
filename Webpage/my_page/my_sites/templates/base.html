@@ -1,0 +1,153 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head><!-- This is the head of my page-->
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width= device-width, initial-scale =1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel ="stylesheet" href="{% static '/style.css' %}"> <!-- Css link for styling-->
+    <title>Study Informatics</title><!-- This is the title of my page-->
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style= "background-color:#e3f2fd;">
+        <div class="container">
+          <a class="navbar-brand" href="#"><span class="text-warning">Study Informatics</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+              <a class="nav-link" href="#Home">Home</a>
+              <a class="nav-link" href="#About Us">AboutUs</a>
+              <a class="nav-link" href = "#Contact Us">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container">
+        <div class="jumbotron" >
+            <h1>Study Informatics</h1> <!-- Displaying the heading of the website-->
+        </div>
+        <div class="row gy-3">
+            <div class="col-md-4 ">
+              <div class="card h-100" >
+                  <img src="{% static 'images/human.jpg' %}" alt="Human Computer Interaction" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Human Computer Interaction</h5>
+                  <h5>R300</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="card h-100">
+                  <img src="{% static 'images/fundamentals.jpg' %}" alt="Computer fundamentals" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Computer fundamentals</h5>
+                  <h5>R320</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="card h-100" >
+                  <img src="{% static 'images/intro.jpg' %}" alt="Introduction to programming" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to programmin</h5>
+                  <h5>R600</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="card h-100">
+                  <img src="{% static 'images/networks.jpg' %}" alt="Computer networks" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Computer networks</h5>
+                  <h5>R300</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="card h-100">
+                  <img src="{% static 'images/stats.jpg' %}" alt="Introduction to Statistics" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Introduction to Statisticsn</h5>
+                  <h5>R120</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="card h-100">
+                  <img src="{% static 'images/human.jpg' %}" alt="Visual programming" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Visual programming</h5>
+                  <h5>R300</h5>
+                  <button class="btn-primary">Start Course</button>
+  
+                </div>
+              </div>
+            </div>
+            
+            
+            <footer class="footer-text text-center">
+              <div class="container">
+                <h4>Connect with Us</h4>
+                  <div class="row">
+                      <!-- Footer Location-->
+                      <div class="col-lg-4 mb-5 mb-lg-0">
+                          <p class="lead mb-0">
+                              Reach Us @
+                              <br/>
+                              <a href="mailto:hackershackofficial@gmail.com">sisandaltom@gmail.com</a>
+                          </p>
+                      </div>
+                      <!-- Footer Social Icons-->
+                      <div class="col-lg-4 mb-5 mb-lg-0">
+                          <a class="btn btn-outline-light btn-social mx-1" title="Instagram" href="https://www.instagram.com/sisanda_tom/"><i class="fab fa-instagram"></i></a>  
+    
+                      </div>
+                      <!-- Footer About Text-->
+                      <div class="col-lg-4">
+                          <p class="lead mb-0 w-100">
+                              Quick Links
+                              <br/>
+                              <a class="px-2 {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">Home</a>
+                              <a class="px-2 {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
+                              <a class="px-2 {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+          <!-- Copyright Section-->
+          <div class="copyright py-4 text-center text-white">
+              <div class="container"><small>Last Update - April 2023</small></div>
+          </div>
+          <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+          <div class="scroll-to-top d-lg-none position-fixed">
+              <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+               <script src="https://cdn.jsdelivr.net/npm/@p..e@2.9.3/dist/umd/popper.min.js"
+                       integrity="sha384-9JzLDoVyLrLRfYKjPQoIbb0JxOxDbkKjO8vpv9EaHcgGhDYrbsYc44K2fQGRFAkx"
+                       crossorigin="anonymous"></script>
+                     
+           </body>
+          </html>
+          
+        
+              
+            
+      

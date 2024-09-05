@@ -1,0 +1,9 @@
+{% extends "header.html" %}
+{% block content %}
+<h3><a href="/reviews/{{reviews.id}}">{{ reviews.title }}</a></h3>
+<h6> {{ reviews.name }}</h6>
+<div class = "container">
+{{ reviews.body|safe|linebreaks}}
+</div>
+<br><br>
+{% endblock %}
