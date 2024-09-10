@@ -14,8 +14,8 @@ django.setup()
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Webdjango'
-copyright = '2023, sisanda'
-author = 'sisanda'
+copyright = '2024, wdkawesome'
+author = 'wdkawesome'
 release = '08.09.23'
 
 # -- General configuration ---------------------------------------------------
